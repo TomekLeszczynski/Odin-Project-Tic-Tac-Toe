@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Odin Project Tic Tac Toe</title>
+</head>
+
+<body>
+    <p class="game-info">Player X won. Congratulations!</p>
+    <div class="turn-info-box">
+        <div class="player-x ">player X</div>
+        <div class="player-o active">player O</div>
+    </div>
+    <div class="grid">
+        <div data-id="1" tabIndex="0"></div>
+        <div data-id="2" tabIndex="0"></div>
+        <div data-id="3" tabIndex="0"></div>
+        <div data-id="4" tabIndex="0"></div>
+        <div data-id="5" tabIndex="0"></div>
+        <div data-id="6" tabIndex="0"></div>
+        <div data-id="7" tabIndex="0"></div>
+        <div data-id="8" tabIndex="0"></div>
+        <div data-id="9" tabIndex="0"></div>
+    </div>
+    <div class="panel">
+        <div class="input-box">
+            <label for="player-x">player X</label>
+            <input type="text" id="player-x" placeholder="your name / max. 10 characters" maxlength="10">
+            <label for="player-o">player O</label>
+            <input type="text" id="player-o" placeholder="your name / max. 10 characters" maxlength="10">
+        </div>
+        <div class="button-box">
+            <button class="start">Start game</button>
+            <button class="restart">Restart</button>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
