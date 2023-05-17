@@ -9,10 +9,10 @@ Tic Tac Toe game project focused on Javascript Factory Functions, Module Pattern
 ## Features
 
 Game logic built with Factory functions / Module Pattern.
-UX:
+# UX:
 
 - Game for 2 players / no AI-opponent available.
-- Each player can add his name or play as a "player X" / "player Y".
+- Each player can add his name or play with default name: "player X" / "player Y".
 - Restart button available.
 - Marker shows which player's turn for the next move.
 
@@ -20,9 +20,9 @@ UX:
 
 Built with:
 
-- HTML,
-- CSS(Sass),
-  \*Vanilla JavaScript.
+* HTML,
+* CSS(Sass),
+* Vanilla JavaScript.
 
 ## Inspiration & resources
 

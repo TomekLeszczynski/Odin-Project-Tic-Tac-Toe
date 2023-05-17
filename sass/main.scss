@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;
 	--primary-color: #00723b;
-    --secondary-color: #db0000;
+	--secondary-color: #db0000;
 }
 body {
 	display: flex;
@@ -65,7 +65,7 @@ body {
 			input {
 				font-size: 16px;
 				padding: 5px 10px;
-                color: var(--secondary-color);
+				color: var(--secondary-color);
 				border: none;
 				border-bottom: 1px dashed var(--primary-color);
 			}
