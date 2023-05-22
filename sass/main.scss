@@ -6,6 +6,7 @@
 :root {
 	--primary-color: #00723b;
 	--secondary-color: #db0000;
+	--white-color: #ffffff;
 }
 body {
 	display: flex;
@@ -15,7 +16,9 @@ body {
 	height: 100dvh;
 	width: 100dvw;
 	font-family: Arial, Helvetica, sans-serif;
-	color: var(--primary-color);
+	// color: var(--primary-color);
+	background: var(--primary-color);
+	color: var(--white-color);
 	.game-info {
 		height: 30px;
 		font-size: 21px;
@@ -60,14 +63,13 @@ body {
 			display: flex;
 			flex-direction: column;
 			label {
-				margin: 10px 0 auto;
+				margin: 10px 0 5px 0;
 			}
 			input {
 				font-size: 16px;
 				padding: 5px 10px;
 				color: var(--secondary-color);
 				border: none;
-				border-bottom: 1px dashed var(--primary-color);
 			}
 			input::placeholder {
 				font-size: 12px;
@@ -82,18 +84,19 @@ body {
 			button {
 				width: 100%;
 				padding: 10px 10px;
-				margin: 10px 10px;
+				margin: 10px 0;
 				color: white;
-				background: var(--primary-color);
+
+				background: none;
 				border-radius: 16px;
-				border: none;
+				border: 2px solid var(--white-color);
 				cursor: pointer;
 				transition: background 0.3s;
 			}
 			button:hover {
 				background: #00b35c;
 			}
-			.restart{
+			.restart {
 				visibility: hidden;
 			}
 		}
@@ -104,7 +107,6 @@ body {
 // <-- player turn -->
 .active {
 	color: white;
-	background: var(--primary-color);
+	border: 2px solid var(--white-color);
 	border-radius: 20px;
 }
-
