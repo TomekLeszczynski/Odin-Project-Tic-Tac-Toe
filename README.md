@@ -1,6 +1,6 @@
 # The Odin Project Tic Tac Toe Game
 
-![Tic Tac Toe game screen](/TicTacToeScreen.jpg)
+![Tic Tac Toe game screen](/TicTacToeScreenScreen.jpg)
 
 # General Info
 
@@ -37,8 +37,8 @@ In progress.
 
 ## Conclusion & Issues
 
-The Module pattern and factory function require careful planning of the application's behavior and placing the "logic" in the right place. However, as a result, the code has a chance to remain organized, it is easy to work with, and allows for the use of namespacing, which solves naming conflicts.
-Working with the Module pattern or factory requires getting used to it. 
+The Module pattern and factory function require careful planning of the application's behavior and placing the "logic" in the right place. However, as a result, the code has a chance to remain organized, it is easier to work with, and allows for the use of "namespacing", which solves naming conflicts.
+Working with the Module pattern or factory requires getting used to it but pays off with better workflow.
 
 Initially, I had trouble accessing certain data, such as inputs, to use them for displaying the names entered by players instead of default names.
 After all I wish to learn more about Module Patterns.
