@@ -1,0 +1,121 @@
+Pattern Gameboard:
+- pobiera dane graczy
+
+
+- odkrywa / ukrywa elementy 
+
+///////////////////////////////////////////////////
+
+Pattern GameController:
+- ustala, ze zaczyna playerX
+            let currentPlayer = playerX 
+            let gameDone = false
+            let isWinner = false
+
+- steruje wyswietlaniem aktywnego gracza ( jest w funkcji start)
+- wyswietla komunikat o wygranej (ze zwyciezca) / remisie
+
+    function gameInfo() {
+        jesli tablica pusta i nie a zwyciezcy -> info, ze remis
+        jesli zwyciezca -> ${zwyciezca} wygrał
+        blokuje dalsza gre
+    }
+
+- startuje grę
+
+    function setDisplay() {
+		gameInfo.textContent = ''
+		grid.style.visibility = 'visible'
+		startBtn.style.display = 'none'
+		inputBox.style.display = 'none'
+        playerXMarker.classList.add('active')
+		playerXMarker.textContent = inputs[0].value.toUpperCase() || 'Player X'
+		playerOMarker.textContent = inputs[1].value.toUpperCase() || 'Player O'
+        handleGame()
+    }
+
+    function handleGame() {
+        const playerX = Player(`${inputs[0].value.toUpperCase() || 'Player X'}, 'X')
+        const playerO = Player(`${inputs[1].value.toUpperCase() || 'Player O'}, 'O')
+        const cells = document.querySelectorAll('[data-id]')
+	    let gameBoardArr = [...cells]
+        if(currentPayer == playerX){
+            playerX.grabCell(e, gameBoardArr)
+            currentPayer = playerO
+            playerXMarker.classList.remove('active')
+			playerOMarker.classList.add('active')
+            checkForWin(gameBoardArr)
+        } else if(currentPayer == playerO){
+            playerO.grabCell(e,gameBoardArr)
+            currentPayer = playerX
+            playerXMarker.classList.add('active')
+            playerOMarker.classList.remove('active')
+            checkForWin(gameBoardArr)
+        }
+    }
+
+- resetuje plansze
+
+    function restart = () => location.reload()
+
+return{restart, start,}
+
+/////////////////////////////////////////////////////
+
+Factory functions Player:
+- zawiera tablice z pobranymi komórkami
+- zaznacza wybraną komórkę 
+- sprawdza czy elementy tablicy pasuja do tablicy z wygranymi kombinacjami
+- zwraca wygraną
+
+test:
+
+const Player = (name, marker) => {
+    let playerArray = []
+    const getName = () => name;
+    const getMarker = () => marker;
+
+    const grabCell = (event, array) => {
+        const cell = event.target.dataset.id
+        if (e.target.textContent != ''){
+            alert('Pick one of free cells!')
+			return
+        } else {
+        event.target.textContent = marker
+        playerArray.push(cell)
+        array.shift(cell)
+        }
+        pobiera komórkę / składa w tablicy / zaznacza na planszy
+        usuwa komórkę z tablicy komórek
+
+    } 
+    const checkForWin = (array) => {
+	const winningLines = [
+		[1, 4, 7],
+		[2, 5, 8],
+		[3, 6, 9],
+		[1, 2, 3],
+		[4, 5, 6],
+		[7, 8, 9],
+		[1, 5, 9],
+		[7, 5, 3],
+	]
+    winningLines.forEach(element => {
+        if(playerArray.sort().join('').includes(element.sort().join(''))){
+            isWinner = true
+            gameDone = true
+
+        }
+    })
+        porównuje tablicę gracza do tablicy w wygranymi kombinacjami
+        zwraca isWinner / gameDone
+
+    }
+
+    return {getName, getMarker, grabCell, checkForWin, isWinner}
+}
+
+///////////////////////////////////////////////
+
+
+

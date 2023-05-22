@@ -5,41 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
     <title>Odin Project Tic Tac Toe</title>
 </head>
 
 <body>
-    <p class="game-info">John has won. Congratulations!</p>
+    <p class="game-info">Set players name and / or click "Start"</p>
     <div class="turn-info-box">
-        <div class="player-x active">John</div>
-        <div class="player-o">Marie</div>
+        <div class="player-x"></div>
+        <div class="player-o"></div>
     </div>
     <div class="grid">
-        <div data-id="1" tabIndex="0">X</div>
+        <div data-id="1" tabIndex="0"></div>
         <div data-id="2" tabIndex="0"></div>
-        <div data-id="3" tabIndex="0">O</div>
+        <div data-id="3" tabIndex="0"></div>
         <div data-id="4" tabIndex="0"></div>
-        <div data-id="5" tabIndex="0">X</div>
-        <div data-id="6" tabIndex="0">O</div>
+        <div data-id="5" tabIndex="0"></div>
+        <div data-id="6" tabIndex="0"></div>
         <div data-id="7" tabIndex="0"></div>
-        <div data-id="8" tabIndex="0">O</div>
-        <div data-id="9" tabIndex="0">X</div>
+        <div data-id="8" tabIndex="0"></div>
+        <div data-id="9" tabIndex="0"></div>
     </div>
     <div class="panel">
         <div class="input-box">
             <label for="player-x">player X</label>
-            <input type="text" id="player-x" placeholder="your name / max. 10 characters" maxlength="10" disabled>
+            <input type="text" id="player-x" placeholder="your name / max. 10 characters" maxlength="10" autocomplete="off">
             <label for="player-o">player O</label>
-            <input type="text" id="player-o" placeholder="your name / max. 10 characters" maxlength="10" disabled>
+            <input type="text" id="player-o" placeholder="your name / max. 10 characters" maxlength="10" autocomplete="off">
         </div>
         <div class="button-box">
-            <button class="start">Start game</button>
+            <button class="start">Start</button>
             <button class="restart">Restart</button>
         </div>
     </div>
 
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
