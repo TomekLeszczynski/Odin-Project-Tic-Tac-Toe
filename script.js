@@ -92,6 +92,7 @@ const GameController = (() => {
 		grid.style.visibility = 'visible'
 		startBtn.style.display = 'none'
 		inputBox.style.display = 'none'
+		restartBtn.style.visibility='visible'
 		playerXMarker.classList.add('active')
 		playerXMarker.textContent = playerX.getName()
 		playerOMarker.textContent = playerO.getName()
@@ -112,7 +113,7 @@ const GameController = (() => {
 		playerXMarker.classList.toggle('active')
 		playerOMarker.classList.toggle('active')
 	}
-	// <--
+
 	grid.addEventListener('click', handleGameBoard)
 	restartBtn.addEventListener('click', () => location.reload())
 

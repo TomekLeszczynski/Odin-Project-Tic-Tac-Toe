@@ -88,7 +88,6 @@ body .panel .button-box {
   margin-top: 20px;
 }
 body .panel .button-box button {
-  display: inline;
   width: 100%;
   padding: 10px 10px;
   margin: 10px 10px;
@@ -101,6 +100,9 @@ body .panel .button-box button {
 }
 body .panel .button-box button:hover {
   background: #00b35c;
+}
+body .panel .button-box .restart {
+  visibility: hidden;
 }
 
 .active {
